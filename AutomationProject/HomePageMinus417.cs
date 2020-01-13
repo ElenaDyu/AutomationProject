@@ -8,15 +8,14 @@ using OpenQA.Selenium.Chrome;
 namespace AutomationProject
 {
     [TestFixture]
-    public class GreenTea : TestBase
+    public class HomePageMinus417 : TestBase
     {
         [Test]
-        public void GreenTea_AddEditOrder()
+        public void HomePageminus417_SeeAllHeaderItems()
         {
-            var demo = new Теаs();
+            var home = new HomePage();
+            home.SeeAllHeaderItems();
 
-            demo.SelectMenuSection();
-            demo.PayWithCreditCardGreenTea();
         }
     }
 }

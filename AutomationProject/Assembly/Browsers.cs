@@ -10,7 +10,7 @@ namespace AutomationProject.Assembly
     public class Browsers
     {
         private static IWebDriver webDriver;
-        private static readonly string Url = "http://www.practiceselenium.com/";
+        private static readonly string Url = "https://minus417.bg/";
         private static readonly string browser = "Chrome";
 
         public static void Initialize()

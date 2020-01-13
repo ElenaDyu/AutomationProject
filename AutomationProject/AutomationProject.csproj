@@ -74,10 +74,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actor\I.cs" />
+    <Compile Include="Actor\Wait.cs" />
     <Compile Include="Assembly\Browsers.cs" />
     <Compile Include="Assembly\TestBase.cs" />
-    <Compile Include="Pages\Teas.cs" />
-    <Compile Include="GreenTea.cs" />
+    <Compile Include="Pages\HomePage.cs" />
+    <Compile Include="HomePageMinus417.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

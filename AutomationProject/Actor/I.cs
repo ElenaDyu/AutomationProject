@@ -25,6 +25,5 @@ namespace AutomationProject.Actor
         {
             Thread.Sleep((int)TimeSpan.FromSeconds(seconds).TotalMilliseconds);
         }
-
     }
 }
