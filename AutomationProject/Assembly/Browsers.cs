@@ -9,25 +9,26 @@ namespace AutomationProject.Assembly
 {
     public class Browsers
     {
-        private static IWebDriver webDriver;
+        private static IWebDriver driver;
         private static readonly string Url = "https://minus417.bg/";
         private static readonly string browser = "Chrome";
+        public static IJavaScriptExecutor js;
 
         public static void Initialize()
         {
             switch (browser)
             {
                 case "Chrome":
-                    webDriver = new ChromeDriver();
+                    driver = new ChromeDriver();
                     break;
                 case "FireFox":
-                    webDriver = new FirefoxDriver();
+                    driver = new FirefoxDriver();
                     break;
                 default:
-                    webDriver = new ChromeDriver();
+                    driver = new ChromeDriver();
                     break;
             }
-            webDriver.Manage().Window.Maximize();
+            driver.Manage().Window.Maximize();
             GoTo(Url);
             Thread.Sleep(5);
         }
@@ -35,23 +36,32 @@ namespace AutomationProject.Assembly
         public static string Title
         {
             get
-            { return webDriver.Title; }
+            { return driver.Title; }
         }
 
-        public static IWebDriver getDriver
+        public static IWebDriver GetDriver
         {
             get
-            { return webDriver; }
+            { return driver; }
         }
 
         public static void GoTo(string url)
         {
-            webDriver.Url = url;
+            driver.Url = url;
         }
 
         public static void Close()
         {
-            webDriver.Quit();
+            driver.Quit();
         }
+
+        public static IJavaScriptExecutor JavaScript
+        {
+            get
+            {
+                return driver as IJavaScriptExecutor;
+            }
+        }
+
     }
 }

@@ -6,11 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using AutomationProject.Assembly;
 using System.Threading;
+using OpenQA.Selenium.Support.UI;
 
 namespace AutomationProject.Actor
 {
     public static class I
     {
+        public static TimeSpan waitForElement = TimeSpan.FromSeconds(10);
+
         public static void Click(this IWebElement element)
         {
             element.Click();
@@ -25,5 +28,6 @@ namespace AutomationProject.Actor
         {
             Thread.Sleep((int)TimeSpan.FromSeconds(seconds).TotalMilliseconds);
         }
+
     }
 }

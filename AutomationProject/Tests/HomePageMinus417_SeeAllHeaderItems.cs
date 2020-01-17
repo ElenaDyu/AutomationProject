@@ -5,17 +5,19 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 
-namespace AutomationProject
+namespace AutomationProject.Tests
 {
     [TestFixture]
-    public class HomePageMinus417 : TestBase
+    public class HomePageMinus417_SeeAllHeaderItems : TestBase
     {
         [Test]
-        public void HomePageminus417_SeeAllHeaderItems()
+        public void HomePageMinus417_SeeAllHeaderItems_Test()
         {
             var home = new HomePage();
+            var profile = new Account();
             home.SeeAllHeaderItems();
-
+            profile.GoToMyProfile();
+            
         }
     }
 }
