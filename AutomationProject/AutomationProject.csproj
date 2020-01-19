@@ -86,7 +86,8 @@
     <Compile Include="Assembly\TestBase.cs" />
     <Compile Include="Pages\Account.cs" />
     <Compile Include="Pages\HomePage.cs" />
-    <Compile Include="Tests\Accounts\RegistrationForm_Validation.cs" />
+    <Compile Include="Tests\Accounts\LoginForm_Validation.cs" />
+    <Compile Include="Tests\Accounts\MyProfile_LogIn.cs" />
     <Compile Include="Tests\HomePageMinus417_SeeAllHeaderItems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\HomePageMinus417_SeeAllFooterItems.cs" />
