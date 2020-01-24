@@ -19,6 +19,8 @@ namespace AutomationProject.Pages
         public IWebElement Downloads => Browsers.GetDriver.FindElement(By.XPath("//div[@id='post-303']//a[@href='https://minus417.bg/my-profile/downloads/']"));
         public IWebElement Addresses => Browsers.GetDriver.FindElement(By.XPath("//div[@id='post-303']//a[@href='https://minus417.bg/my-profile/edit-address/']"));
         public IWebElement ProfileDetails => Browsers.GetDriver.FindElement(By.XPath("//div[@id='post-303']//a[@href='https://minus417.bg/my-profile/edit-account/']"));
+        public IWebElement Exit => Browsers.GetDriver.FindElement(By.XPath("//li[contains(@class,'woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout')]//a[contains(@class,'uk-h5 uk-link')]"));
+        public IWebElement EntranceLabel => Browsers.GetDriver.FindElement(By.XPath("//div[@class='u-column1 col-1 uk-width-1-2@m']//h2"));
 
         public void GoToMyProfile()
         {
@@ -45,6 +47,7 @@ namespace AutomationProject.Pages
             I.FillField(EmailAddress, email);
             I.FillField(Password, Pass);
             I.Click(Entrance);
+            I.Wait(2);
             Wait.ForReady();
         }
 
@@ -57,6 +60,13 @@ namespace AutomationProject.Pages
             Wait.IsElementVisible(Addresses);
             Wait.IsElementVisible(ProfileDetails);
         }
+
+        public void LogOutFromMyProfile()
+        {
+            I.Click(Exit);
+            Wait.IsElementVisible(EntranceLabel);
+        }
+
 
     }
 }

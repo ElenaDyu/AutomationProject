@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 
-namespace AutomationProject.Tests
+namespace AutomationProject.Tests.Home
 {
     [TestFixture]
     public class HomePageMinus417_SeeAllHeaderItems : TestBase

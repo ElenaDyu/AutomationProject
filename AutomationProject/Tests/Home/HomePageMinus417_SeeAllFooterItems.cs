@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutomationProject.Tests
+namespace AutomationProject.Tests.Home
 {
     [TestFixture]
     public class HomePageMinus417_SeeAllFooterItems : TestBase
