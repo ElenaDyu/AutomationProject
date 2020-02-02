@@ -66,7 +66,5 @@ namespace AutomationProject.Pages
             I.Click(Exit);
             Wait.IsElementVisible(EntranceLabel);
         }
-
-
     }
 }

@@ -44,7 +44,27 @@ namespace AutomationProject.Pages
         public IWebElement Soap => Browsers.GetDriver.FindElement(By.XPath("//span[.='Сапун']"));
         public IWebElement Scrub => Browsers.GetDriver.FindElement(By.XPath("//span[.='Скраб']"));
         public IWebElement Salts => Browsers.GetDriver.FindElement(By.XPath("//span[.='Соли']"));
-        //public IWebElement  => Browsers.GetDriver.FindElement(By.XPath("//span[.='']"));
+        public IWebElement HandsCream => Browsers.GetDriver.FindElement(By.XPath("//li[@id='nav-menu-item-4566']//span"));
+        public IWebElement HandsSoap => Browsers.GetDriver.FindElement(By.XPath("//li[@id='nav-menu-item-4567']//span"));
+        public IWebElement Gel => Browsers.GetDriver.FindElement(By.XPath("//span[.='Гел']"));
+        public IWebElement FaceCream => Browsers.GetDriver.FindElement(By.XPath("//li[@id='nav-menu-item-4570']//span"));
+        public IWebElement Mask => Browsers.GetDriver.FindElement(By.XPath("//span[.='Маска']"));
+        public IWebElement CleanUp => Browsers.GetDriver.FindElement(By.XPath("//span[.='Почистване']"));
+        public IWebElement Serum => Browsers.GetDriver.FindElement(By.XPath("//span[.='Серум']"));
+        public IWebElement Tonic => Browsers.GetDriver.FindElement(By.XPath("//span[.='Тоник']"));
+        public IWebElement LegsCream => Browsers.GetDriver.FindElement(By.XPath("//a[@href='https://minus417.bg/produkt-category/kraka/krem-kraka/']//span"));
+        public IWebElement HairCare => Browsers.GetDriver.FindElement(By.XPath("//span[.='Грижа за косата']"));
+        public IWebElement SeriesForMan => Browsers.GetDriver.FindElement(By.XPath("//span[.='Серия за мъже']"));
+        public IWebElement SensualEssence => Browsers.GetDriver.FindElement(By.XPath("//span[.='Sensual Essense']"));
+        public IWebElement SerenityLegend => Browsers.GetDriver.FindElement(By.XPath("//span[.='Serenity Legend']"));
+        public IWebElement TimeControl => Browsers.GetDriver.FindElement(By.XPath("//span[.='Time Control']"));
+        public IWebElement RadiantSee => Browsers.GetDriver.FindElement(By.XPath("//span[.='Radiant See']"));
+        public IWebElement ReDefine => Browsers.GetDriver.FindElement(By.XPath("//span[.='Re Define']"));
+        public IWebElement InfiniteMotion => Browsers.GetDriver.FindElement(By.XPath("//span[.='Infinite Motion']"));
+        public IWebElement EvenMore => Browsers.GetDriver.FindElement(By.XPath("//span[.='Even More']"));
+        public IWebElement AbsoluteMud => Browsers.GetDriver.FindElement(By.XPath("//span[.='Absolute mud']"));
+       // public IWebElement  => Browsers.GetDriver.FindElement(By.XPath("//span[.='']"));
+       // public IWebElement  => Browsers.GetDriver.FindElement(By.XPath("//span[.='']"));
 
         public void SeeAllHeaderItems()
         {
@@ -97,6 +117,62 @@ namespace AutomationProject.Pages
             Wait.IsElementVisible(Scrub);
             Wait.IsElementVisible(Salts);
         }
-        
+
+        public void SeeAllHandsSubCategories()
+        {
+            Actions builder = new Actions(Browsers.GetDriver);
+            builder.MoveToElement(CategoriesTab).Perform();
+            Wait.IsElementVisible(HandsCategory);
+            builder.MoveToElement(HandsCategory).Perform();
+            Wait.IsElementVisible(HandsCream);
+            Wait.IsElementVisible(HandsSoap);
+        }
+
+        public void SeeAllFaceSubCategories()
+        {
+            Actions builder = new Actions(Browsers.GetDriver);
+            builder.MoveToElement(CategoriesTab).Perform();
+            Wait.IsElementVisible(FaceCategory);
+            builder.MoveToElement(FaceCategory).Perform();
+            Wait.IsElementVisible(Gel);
+            Wait.IsElementVisible(FaceCream);
+            Wait.IsElementVisible(Mask);
+            Wait.IsElementVisible(CleanUp);
+            Wait.IsElementVisible(Serum);
+            Wait.IsElementVisible(Tonic);
+        }
+
+        public void SeeAllLegsSubCategories()
+        {
+            Actions builder = new Actions(Browsers.GetDriver);
+            builder.MoveToElement(CategoriesTab).Perform();
+            Wait.IsElementVisible(LegsCategory);
+            builder.MoveToElement(LegsCategory).Perform();
+            Wait.IsElementVisible(LegsCream);
+        }
+
+        public void SeeAllHairSubCategories()
+        {
+            Actions builder = new Actions(Browsers.GetDriver);
+            builder.MoveToElement(CategoriesTab).Perform();
+            Wait.IsElementVisible(HairCategory);
+            builder.MoveToElement(HairCategory).Perform();
+            Wait.IsElementVisible(HairCare);
+        }
+
+        public void SeeAllSeries()
+        {
+            Actions builder = new Actions(Browsers.GetDriver);
+            builder.MoveToElement(SeriesTab).Perform();
+            Wait.IsElementVisible(SeriesForMan);
+            Wait.IsElementVisible(SensualEssence);
+            Wait.IsElementVisible(SerenityLegend);
+            Wait.IsElementVisible(TimeControl);
+            Wait.IsElementVisible(RadiantSee);
+            Wait.IsElementVisible(ReDefine);
+            Wait.IsElementVisible(InfiniteMotion);
+            Wait.IsElementVisible(EvenMore);
+            Wait.IsElementVisible(AbsoluteMud);
+        }
     }
 }

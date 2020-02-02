@@ -7,18 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutomationProject.Tests.Home
+namespace AutomationProject.Tests.Products
 {
     [TestFixture]
-    public class Categories_SeeAllCategories : TestBase
+    public class SoapProduct_SearchSeeOpen : TestBase 
     {
         [Test]
-        public void Categories_SeeAllCategories_Test()
+        public void SoapProduct_SearchSeeOpen_Test()
         {
-            var home = new HomePage();
-            home.SeeAllCategories();
-
+            var items = new Items();
+            items.SearchForProduct();
+            items.SelectProduct();
         }
-
     }
 }

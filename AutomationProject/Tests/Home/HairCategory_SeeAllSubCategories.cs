@@ -10,15 +10,15 @@ using System.Threading.Tasks;
 namespace AutomationProject.Tests.Home
 {
     [TestFixture]
-    public class Categories_SeeAllCategories : TestBase
+    public class HairCategory_SeeAllSubCategories : TestBase 
     {
         [Test]
-        public void Categories_SeeAllCategories_Test()
+        public void HairCategory_SeeAllSubCategories_Test()
         {
             var home = new HomePage();
-            home.SeeAllCategories();
-
+            home.SeeAllHairSubCategories();
         }
+
 
     }
 }

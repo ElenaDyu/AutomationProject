@@ -86,15 +86,21 @@
     <Compile Include="Assembly\TestBase.cs" />
     <Compile Include="Pages\Account.cs" />
     <Compile Include="Pages\HomePage.cs" />
-    <Compile Include="Pages\Products.cs" />
+    <Compile Include="Pages\Items.cs" />
     <Compile Include="Tests\Accounts\LoginForm_Validation.cs" />
     <Compile Include="Tests\Accounts\MyProfile_LogIn.cs" />
     <Compile Include="Tests\Accounts\MyProfile_LogOut.cs" />
     <Compile Include="Tests\Home\BodyCategory_SeeAllSubCategories.cs" />
+    <Compile Include="Tests\Home\FaceCategory_SeeAllSubCategories.cs" />
+    <Compile Include="Tests\Home\HairCategory_SeeAllSubCategories.cs" />
+    <Compile Include="Tests\Home\HandsCategory_SeeAllSubCategories.cs" />
     <Compile Include="Tests\Home\HomePageMinus417_SeeAllCategories.cs" />
     <Compile Include="Tests\Home\HomePageMinus417_SeeAllHeaderItems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Home\HomePageMinus417_SeeAllFooterItems.cs" />
+    <Compile Include="Tests\Home\LegsCategory_SeeAllSubCategories.cs" />
+    <Compile Include="Tests\Home\Series_SeeAllCategories.cs" />
+    <Compile Include="Tests\Products\SoapProduct_SearchSeeOpen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

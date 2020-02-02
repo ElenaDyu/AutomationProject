@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 namespace AutomationProject.Tests.Accounts
 {
     [TestFixture]
-     public class LoginForm_Validation : TestBase
+     public class LoginForm_CheckValidation : TestBase
     {
         [Test]
-        public void LoginForm_Validation_Test()
+        public void LoginForm_CheckValidation_Test()
         {
             var account = new Account();
             account.GoToMyProfile();
