@@ -1,12 +1,14 @@
 ﻿using AutomationProject.Actor;
 using OpenQA.Selenium;
 using AutomationProject.Assembly;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace AutomationProject.Pages
 {
    public class Account
     {
-        public string Pass = "A*M54ONempw5";
+        public string Pass = "ElenaDyulgerska2193";
         public string email = "edyulgerska@gmail.com";
 
         public IWebElement EmailAddress => Browsers.GetDriver.FindElement(By.CssSelector("#username"));
@@ -21,6 +23,11 @@ namespace AutomationProject.Pages
         public IWebElement ProfileDetails => Browsers.GetDriver.FindElement(By.XPath("//div[@id='post-303']//a[@href='https://minus417.bg/my-profile/edit-account/']"));
         public IWebElement Exit => Browsers.GetDriver.FindElement(By.XPath("//li[contains(@class,'woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout')]//a[contains(@class,'uk-h5 uk-link')]"));
         public IWebElement EntranceLabel => Browsers.GetDriver.FindElement(By.XPath("//div[@class='u-column1 col-1 uk-width-1-2@m']//h2"));
+        public IWebElement ProfileDetailsLabel => Browsers.GetDriver.FindElement(By.XPath("//h1[.='Детайли на профила']"));
+        public IWebElement FirstName => Browsers.GetDriver.FindElement(By.Id("account_first_name"));
+        public IWebElement LastName => Browsers.GetDriver.FindElement(By.Id("account_last_name"));
+        public IWebElement DisplayName => Browsers.GetDriver.FindElement(By.Id("account_display_name"));
+        public IWebElement DisplayName => Browsers.GetDriver.FindElement(By.Id("account_display_name"));
 
         public void GoToMyProfile()
         {
@@ -66,5 +73,13 @@ namespace AutomationProject.Pages
             I.Click(Exit);
             Wait.IsElementVisible(EntranceLabel);
         }
+
+        public void GoToProfileDetails()
+        {
+            I.Click(ProfileDetails);
+            var wait = new WebDriverWait(Browsers.GetDriver, new TimeSpan(0, 0, 30));
+            var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//h1[.='Детайли на профила']")));
+        }
+
     }
 }

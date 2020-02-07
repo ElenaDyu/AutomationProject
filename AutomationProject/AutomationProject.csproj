@@ -87,6 +87,7 @@
     <Compile Include="Pages\Account.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\Items.cs" />
+    <Compile Include="Tests\Accounts\AccountDetails_EditVerify.cs" />
     <Compile Include="Tests\Accounts\LoginForm_Validation.cs" />
     <Compile Include="Tests\Accounts\MyProfile_LogIn.cs" />
     <Compile Include="Tests\Accounts\MyProfile_LogOut.cs" />
