@@ -27,7 +27,6 @@ namespace AutomationProject.Pages
         public IWebElement FirstName => Browsers.GetDriver.FindElement(By.Id("account_first_name"));
         public IWebElement LastName => Browsers.GetDriver.FindElement(By.Id("account_last_name"));
         public IWebElement DisplayName => Browsers.GetDriver.FindElement(By.Id("account_display_name"));
-        public IWebElement DisplayName => Browsers.GetDriver.FindElement(By.Id("account_display_name"));
 
         public void GoToMyProfile()
         {
@@ -80,6 +79,5 @@ namespace AutomationProject.Pages
             var wait = new WebDriverWait(Browsers.GetDriver, new TimeSpan(0, 0, 30));
             var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//h1[.='Детайли на профила']")));
         }
-
     }
 }
